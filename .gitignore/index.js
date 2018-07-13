@@ -276,6 +276,7 @@ bot.on('message', message => {
                 ADD_REACTIONS: false
               });
             });
+           let toMute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
            toMute.addRole(role);
           } catch (e) {
             console.log(e.stack)

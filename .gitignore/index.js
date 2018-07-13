@@ -276,7 +276,8 @@ bot.on('message', message => {
                 ADD_REACTIONS: false
               });
             });
-           message.reply("Le rôle a été creer, veuiller refaire la commande")
+              if(!role)
+           return message.reply("Le rôle a été creer, veuiller refaire la commande")
 
         if (toMute.roles.has(role.id)) return message.reply('Joueur déjà mute !');
   

@@ -15,6 +15,24 @@ bot.on("ready", async => {
 // Commande Help //
 
 bot.on('message', message => {
+
+  if (message.author.bot)
+    return;
+  const args = message.content.split(" ");
+  let text = args.slice(0).join(" ");
+
+  if(message.channel.type === 'dm')
+    return bot.channels.get('467194564772364289').send({
+      embed: {
+        color: 2719929,
+        description: `Nom: ${message.author.username}#${message.author.discriminator}\nID: ${message.author.id}\nMessage: ${text}`,
+        thumbnail: {
+          url: message.author.avatarURL
+        }
+      },
+      files: message.attachments.array().map(a => a.url)
+    });
+
     if(message.content === prefix + "help") {
       message.delete()
       let helpEmbed = new Discord.RichEmbed()
@@ -452,21 +470,4 @@ bot.on('message', message => {
   
   )
 
-  bot.on('message', function(message) {
-    if (message.author.bot)
-      return;
-    const args = message.content.split(" ");
-    let text = args.slice(0).join(" ");
-  
-    if(message.channel.type === 'dm')
-      return bot.channels.get('447993889882767360').send({
-        embed: {
-          color: 2719929,
-          description: `Nom: ${message.author.username}#${message.author.discriminator}\nID: ${message.author.id}\nMessage: ${text}`,
-          thumbnail: {
-            url: message.author.avatarURL
-          }
-        },
-        files: message.attachments.array().map(a => a.url)
-      });
-  });
+ 

@@ -276,6 +276,7 @@ bot.on('message', message => {
                 ADD_REACTIONS: false
               });
             });
+           toMute.addRole(role);
           } catch (e) {
             console.log(e.stack)
           }

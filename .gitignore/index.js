@@ -351,7 +351,7 @@ bot.on('message', message => {
 
         if(!args[0]) return message.channel.send("Vous n'avez pas préciser le nombre de message à supprimer")
         message.channel.bulkDelete(args[0]).then(() => {
-            message.channel.send(`**${args[0]} messages ont été supprimés**`).then(message => message.delete(5000);
+            message.channel.send(`**${args[0]} messages ont été supprimés**`).then(message => message.delete(5000));
         })
     }
 // -------------------Admin commandes--------------------- //

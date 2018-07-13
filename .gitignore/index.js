@@ -276,8 +276,7 @@ bot.on('message', message => {
                 ADD_REACTIONS: false
               });
             });
-           let toMute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-           toMute.addRole(role);
+           message.reply("Le rôle a été creer, veuiller refaire la commande")
           } catch (e) {
             console.log(e.stack)
           }

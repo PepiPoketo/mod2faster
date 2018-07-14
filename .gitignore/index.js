@@ -8,7 +8,7 @@ bot.login(process.env.TOKEN)
 // Quand le bot se connecte //
 
 bot.on("ready", async => {
-    bot.user.setActivity("/help | ${bot.guilds.size} serveurs ${bot.users.size} membres", {type: "PLAYING"});
+    bot.user.setActivity("/help", {type: "PLAYING"});
     console.log(`Bot connecté avec ${bot.users.size} membres, sur ${bot.guilds.size} serveurs.`)
 });
 

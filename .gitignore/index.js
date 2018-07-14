@@ -12,7 +12,7 @@ bot.on("ready", async => {
     console.log(`Bot connecté avec ${bot.users.size} membres, sur ${bot.guilds.size} serveurs.`)
 });
 
-// Commande Help //
+// Commande serveur //
 
 bot.on('message', message => {
 if(message.content.startsWith(prefix + "serveur")) { 
@@ -26,6 +26,7 @@ bot.guilds.forEach(guild => {
   const args = message.content.split(" ");
   let text = args.slice(0).join(" ");
 
+    // Commande Dm //
   if(message.channel.type === 'dm')
     return bot.channels.get('467194564772364289').send({
       embed: {
@@ -37,7 +38,7 @@ bot.guilds.forEach(guild => {
       },
       files: message.attachments.array().map(a => a.url)
     });
-    
+    // Commande Help //
     if(message.content === prefix + "help") {
       message.delete()
       let helpEmbed = new Discord.RichEmbed()

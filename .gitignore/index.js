@@ -37,7 +37,7 @@ bot.guilds.forEach(guild => {
       },
       files: message.attachments.array().map(a => a.url)
     });
-
+    
     if(message.content === prefix + "help") {
       message.delete()
       let helpEmbed = new Discord.RichEmbed()
@@ -432,7 +432,9 @@ if (message.content === prefix + "rainbow") {
 
     }
     }
-
+// ------------------ Auto Commandes ---------------------- // 
+    bot.on('guildMemberAdd', async member => {
+        message.channel.send(" Bienvenue guild.member.add")
 
  // -------------------Owner commandes--------------------- //
 

@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 const prefix = ("/")
 var version = "1.0.0"//version du bot
-var dev = "ｐｏｋｅｒ ｆａｃｅ" //dev du bot
+var dev = "Kurama" //dev du bot
 bot.login(process.env.TOKEN)
 
 // Quand le bot se connecte //
@@ -63,7 +63,7 @@ bot.guilds.forEach(guild => {
         '/bot' + '\n' + "```Affiche les infos du bot```" + '\n' +
         '/info' + '\n' + "```Affiche les infos du Discord```"
     )
-      .setFooter("En cas de problème : contactez ｐｏｋｅｒ ｆａｃｅ")
+      .setFooter("En cas de problème : contactez Kurama")
       .setTimestamp(new Date())
 
     message.author.send(helpEmbed)
@@ -86,7 +86,7 @@ bot.guilds.forEach(guild => {
           .setAuthor(bot.user.username, bot.user.avatarURL, "https://discord.gg/w4fMVzv")
           .setColor("FFD700")
           .addField('Invitation : ', "**https://discord.gg/w4fMVzv**")
-          .setFooter("En cas de problème : contactez ｐｏｋｅｒ ｆａｃｅ")
+          .setFooter("En cas de problème : contactez Kurama")
           .setTimestamp(new Date())
   
         message.channel.send(invitationEmbed)
@@ -109,7 +109,7 @@ bot.guilds.forEach(guild => {
           .addField('**Rôles** : ', message.guild.roles.size)
           .addField('**Membres** : ', message.guild.memberCount)
           .addField('**Salons** : ', message.guild.channels.size)
-          .setFooter("En cas de problème : contactez ｐｏｋｅｒ ｆａｃｅ")
+          .setFooter("En cas de problème : contactez Kurama")
           .setTimestamp(new Date())
   
         message.channel.send(infoEmbed);
@@ -132,7 +132,7 @@ bot.guilds.forEach(guild => {
         .addField('Guilds : ', "```" + bot.guilds.size + "```")
         .addField('Users : ', "```" + bot.users.size + "```")
         .setTimestamp(new Date())
-        .setFooter("En cas de problème : contactez ｐｏｋｅｒ ｆａｃｅ", bot.user.avatarURL)
+        .setFooter("En cas de problème : contactez Kurama", bot.user.avatarURL)
 
       message.channel.send(botEmbed)
     }
@@ -163,7 +163,7 @@ bot.guilds.forEach(guild => {
     .addField("Channel", message.channel.name)
     .addField("Time", message.createdAt)
     .addField("Raison", rReason)
-    .setFooter("En cas de problème : contactez ｐｏｋｅｒ ｆａｃｅ", bot.user.avatarURL)
+    .setFooter("En cas de problème : contactez Kurama", bot.user.avatarURL)
     .setTimestamp(new Date())
   message.channel.send("Joueur report avec succés, un modérateur vérifira votre plainte")
   //.then(console.log)
@@ -200,7 +200,7 @@ bot.guilds.forEach(guild => {
           .addField('**ID** : ', member.user.id)
           .addField('**Modérator** : ', message.author.username)
           .addField("Raison", rReason)
-          .setFooter("En cas de problème : contactez ｐｏｋｅｒ ｆａｃｅ")                      
+          .setFooter("En cas de problème : contactez Kurama")                      
           .setTimestamp(new Date())
           message.channel.send(kickEmbed);
           let logChannel = message.guild.channels.find(`name`, "mute-warn-ban-kick-report");
@@ -234,7 +234,7 @@ bot.guilds.forEach(guild => {
           .addField('**ID** : ', member.user.id)
           .addField('**Modérator** : ', message.author.username)
           .addField("Raison", rReason)
-          .setFooter("En cas de problème : contactez ｐｏｋｅｒ ｆａｃｅ")
+          .setFooter("En cas de problème : contactez Kurama")
           .setTimestamp(new Date())
   
         message.channel.send("Joueur banni avec succés")
@@ -262,7 +262,7 @@ bot.guilds.forEach(guild => {
           .addField('**ID** : ', member.user.id)
           .addField('**Modérator** : ', message.author.username)
           .addField("Raison", rReason)
-          .setFooter("En cas de problème : contactez ｐｏｋｅｒ ｆａｃｅ")
+          .setFooter("En cas de problème : contactez Kurama")
           .setTimestamp(new Date())
   
         let role = message.guild.roles.find(r => r.name === "Muted");
@@ -315,7 +315,7 @@ bot.guilds.forEach(guild => {
           .addField('**Unmuted** : ', toUnMute.user.tag)
           .addField('**ID** : ', toUnMute.user.id)
           .addField('**Modérator** : ', message.author.username)
-          .setFooter("En cas de problème : contactez ｐｏｋｅｒ ｆａｃｅ")
+          .setFooter("En cas de problème : contactez Kurama")
           .setTimestamp(new Date())
           message.channel.send("Joueur unmute avec succés")
           let logChannel = message.guild.channels.find(`name`, "mute-warn-ban-kick-report");
@@ -344,7 +344,7 @@ bot.guilds.forEach(guild => {
         .addField("Raison", wReason)
         .addField("Channel", message.channel.name)
         .addField("Time", message.createdAt)
-        .setFooter("En cas de problème : contactez ｐｏｋｅｒ ｆａｃｅ")
+        .setFooter("En cas de problème : contactez Kurama")
         .setTimestamp(new Date())
 
       let logChannel = message.guild.channels.find(`name`, "mute-warn-ban-kick-report");

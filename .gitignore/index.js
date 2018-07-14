@@ -283,11 +283,11 @@ bot.on('message', message => {
             console.log(e.stack)
           }
         }
-  if (!role) return;
+
         if (toMute.roles.has(role.id)) return message.reply('Joueur déjà mute !');
   
       (toMute.addRole(role));
-  
+    if (!role) return;
         message.channel.send("Joueur mute avec succés")
         let logChannel = message.guild.channels.find(`name`, "mute-warn-ban-kick-report");
         logChannel.send(muteEmbed)

@@ -276,9 +276,14 @@ bot.on('message', message => {
                 ADD_REACTIONS: false
               });
             });
-              if(!role)
-           return message.reply("Le rôle a été creer, veuiller refaire la commande")
+              
+           message.reply("Le rôle a été creer, veuiller refaire la commande")
 
+          } catch (e) {
+            console.log(e.stack)
+          }
+        }
+  if (!role) return;
         if (toMute.roles.has(role.id)) return message.reply('Joueur déjà mute !');
   
       (toMute.addRole(role));
@@ -286,13 +291,8 @@ bot.on('message', message => {
         message.channel.send("Joueur mute avec succés")
         let logChannel = message.guild.channels.find(`name`, "mute-warn-ban-kick-report");
         logChannel.send(muteEmbed)
- 
-          } catch (e) {
-            console.log(e.stack)
-          }
-        }
-      }
-    
+    }
+
     if (message.content.startsWith(prefix + "unmute")) {
         let args = message.content.split(' ')
         args.shift()

@@ -432,9 +432,6 @@ if (message.content === prefix + "rainbow") {
 
     }
     }
-// ------------------ Auto Commandes ---------------------- // 
-    bot.on('guildMemberAdd', async member => {
-        message.channel.send(" Bienvenue guild.member.add")
 
  // -------------------Owner commandes--------------------- //
 

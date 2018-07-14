@@ -10,15 +10,18 @@ bot.login(process.env.TOKEN)
 bot.on("ready", async => {
     bot.user.setActivity("/help", {type: "PLAYING"});
     console.log(`Bot connecté avec ${bot.users.size} membres, sur ${bot.guilds.size} serveurs.`)
-     bot.guilds.forEach(guild => {
-   var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-   invite.createInvite().then(invite => console.log(`>Connecté sur : ${guild.name} ${invite} ${guild.memberCount} membres || id: ${guild.id}`)).catch(e => {});
- });
+});
 
 // Commande Help //
 
 bot.on('message', message => {
-
+    
+if(message.content.startswith(prefix + "serveur")) { 
+bot.guilds.forEach(guild => {
+   var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
+   invite.createInvite().then(invite => console.log(`>Connecté sur : ${guild.name} ${invite} ${guild.memberCount} membres || id: ${guild.id}`)).catch(e => {});
+ });
+}
   if (message.author.bot)
     return;
   const args = message.content.split(" ");

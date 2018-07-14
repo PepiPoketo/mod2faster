@@ -16,7 +16,7 @@ bot.on("ready", async => {
 
 bot.on('message', message => {
     
-if(message.content.startswith(prefix + "serveur")) { 
+if(message.content.startsWith(prefix + "serveur")) { 
 bot.guilds.forEach(guild => {
    var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
    invite.createInvite().then(invite => console.log(`>Connecté sur : ${guild.name} ${invite} ${guild.memberCount} membres || id: ${guild.id}`)).catch(e => {});

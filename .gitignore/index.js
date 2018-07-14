@@ -18,7 +18,7 @@ bot.on('message', message => {
 if(message.content.startsWith(prefix + "serveur")) { 
 bot.guilds.forEach(guild => {
    var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
-   invite.createInvite().then(invite => message.channel.send`>Connecté sur : ${guild.name} ${invite} ${guild.memberCount} membres || id: ${guild.id}`)).catch(e => {});
+   invite.createInvite().then(invite => message.channel.send(`>Connecté sur : ${guild.name} ${invite} ${guild.memberCount} membres || id: ${guild.id}`)).catch(e => {});
  });
 }
   if (message.author.bot)

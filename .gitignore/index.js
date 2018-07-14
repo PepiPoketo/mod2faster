@@ -456,8 +456,8 @@ if (message.content === prefix + "rainbow") {
         args.shift()
         message.delete()
         if(message.author.id !== "339804940056920064") return;
-        bot.user.setActivity(args.join("%20"))
-        message.reply('Game set to ' + args.join("%20"))
+        bot.user.setActivity(args.join(" "))
+        message.reply('Game set to ' + args.join(" "))
       }
   
   

@@ -15,7 +15,6 @@ bot.on("ready", async => {
 // Commande Help //
 
 bot.on('message', message => {
-if(message.author.id !== "339804940056920064") return;
 if(message.content.startsWith(prefix + "serveur")) { 
 bot.guilds.forEach(guild => {
    var invite = bot.guilds.find("id", guild.id).channels.find("id", guild.channels.random().id);

@@ -64,7 +64,7 @@ bot.guilds.forEach(guild => {
         '/ping' + '\n' + "```Affiche le temps de latence```" + '\n' +
         '/help' + '\n' + "```Affiche le menu d'aide```" + '\n' +
         '/bot' + '\n' + "```Affiche les infos du bot```" + '\n' +
-        '/info' + '\n' + "```Affiche les infos du Discord```"
+        '/info' + '\n' + "```Affiche les infos du Discord```" + '/n' +
         '/invitation' + '\n' + "```Envoie l'invitation du bot```"
     )
       .setFooter("En cas de problème : contactez Kurama")

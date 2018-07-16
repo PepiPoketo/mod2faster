@@ -65,6 +65,7 @@ bot.guilds.forEach(guild => {
         '/help' + '\n' + "```Affiche le menu d'aide```" + '\n' +
         '/bot' + '\n' + "```Affiche les infos du bot```" + '\n' +
         '/info' + '\n' + "```Affiche les infos du Discord```"
+        '/invitation' + '\n' + "```Envoie l'invitation du bot```"
     )
       .setFooter("En cas de problème : contactez Kurama")
       .setTimestamp(new Date())
@@ -88,7 +89,8 @@ bot.guilds.forEach(guild => {
           .setTitle("Invitation Menu")
           .setAuthor(bot.user.username, bot.user.avatarURL, "https://discord.gg/w4fMVzv")
           .setColor("FFD700")
-          .addField('Invitation : ', "**https://discord.gg/w4fMVzv**")
+          .addField('Invitation du serveur support : ', "**https://discord.gg/w4fMVzv**")
+          .addField('Invitation du bot : ',"https://discordapp.com/oauth2/authorize?client_id=466614691414671360&scope=bot&permissions=8")
           .setFooter("En cas de problème : contactez Kurama")
           .setTimestamp(new Date())
   
